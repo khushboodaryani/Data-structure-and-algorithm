@@ -4,6 +4,9 @@
 
 using namespace std;
 
+//map is used to store key value pair data in ordered way its internally impleneted by red black tree
+//sorted by key take less memory
+
 int main(){
     map<string, int>marksMap;
     marksMap["ram"]= 100;

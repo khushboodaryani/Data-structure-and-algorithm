@@ -4,7 +4,8 @@
 
 using namespace std;
 
-// unordered map implemented by hashing it stores data in key value pair in random order 
+// unordered map implemented by hashing it stores data in key value pair in random order
+// its time complexity o(1) avg, use for fast lookup
 
 int main(){
     unordered_map<string,int>map;
@@ -14,9 +15,26 @@ int main(){
     // for( auto x: map){
     //     cout<<x.first<<" "<<x.second<<endl;
     // }
+     map.insert(make_pair("mobile",17000));
+
     unordered_map<string,int> :: iterator itr;
+    // for(itr = map.begin(); itr!= map.end(); itr++){
+    //     cout<<itr->first<<" "<<itr->second<<endl;
+    // }
+    string key ="gfg";
+    if(map.find(key)!= map.end()){
+        cout<<"found"<<endl;
+    }
+    else{
+        cout<<"not found"<<endl;
+    }
+    key = "krish";
+    map.erase(key);
     for(itr = map.begin(); itr!= map.end(); itr++){
         cout<<itr->first<<" "<<itr->second<<endl;
     }
+
+
+   
     return 0;
 }
